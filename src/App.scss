@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;600&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+--color-base: #073B4C;
+--color-text: #dbebf0;
+--color-highlight: #118AB2;
+--color-highlight-2: #06D6A0;
+--color-highlight-3: #FFD166;
+--color-highlight-4: #EF476F;
+}
+
+
+
+body {
+  background-color: var(--color-base);
+  /*color: #61dafb;*/
+  color: var(--color-text);
+  font-family: Inter, sans-serif;
+  font-weight: 300;
+}
+
+.app-header {
+  position: sticky;
+  top:  0;
+  grid-row:  1;
+  line-height: 100px;
+}
+
+header {
+  grid-row:  1;
+  grid-column: 2;
+  font-size:  200%;
+}
+
+nav#nav-main {
+  grid-row: 1;
+  grid-column:  2/5;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 16px 1fr 50% 1fr 16px;
+  grid-template-rows: 96px 1fr;
+  height:  100vh;
+}
+
+section#main {
+  grid-column: 2 / 5;
+  grid-row: 2;
+}
+
+
+
+table {
+border-collapse: collapse;
+
+  tr {
+    th {
+      // color: var(--color-highlight);
+      font-weight: 400;
+      text-align: left;
+    }
+    th, td {
+      padding: 8px 16px;
+    }
+  }
+  thead tr {
+    border-bottom: 1px solid;
+  }
+  tbody tr:nth-child(odd) {
+    background: rgba(0,0,0,0.125);
+  }
+
+}
+
+
+button {
+    padding: 0em 1em;
+    border: none;
+    background-color: var(--color-highlight-2);
+    color: black;
+    text-transform: capitalize;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+button:hover {
+  filter: brightness(1.5);
+}
+
+input, button, select {
+    line-height: 3em;
+    height: 3em;
+    box-sizing: border-box;
+    border: 0;
+    display: inline-block;
+    margin: 0 0.5em 0.5em 0;
+    font-size: 100%;
+}
