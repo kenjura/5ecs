@@ -6,12 +6,13 @@ body, html {
 }
 
 :root {
---color-base: #073B4C;
---color-text: #dbebf0;
---color-highlight: #118AB2;
---color-highlight-2: #06D6A0;
---color-highlight-3: #FFD166;
---color-highlight-4: #EF476F;
+--color-base: hsl(270deg 34% 12%);
+--color-text: hsl(270deg 41% 90%);
+--color-highlight: hsl(270deg 82% 70%);
+--color-highlight-1: hsl(270deg 82% 70%);
+--color-highlight-2: hsl(330deg 82% 70%);
+--color-highlight-3: hsl(30deg 82% 70%);
+--color-highlight-4: hsl(90deg 82% 70%);
 }
 
 
@@ -100,4 +101,22 @@ input, button, select {
     display: inline-block;
     margin: 0 0.5em 0.5em 0;
     font-size: 100%;
+}
+
+
+.page {
+  position: absolute;
+  top: 80px;
+  left: 100px;
+  width: calc(100vw - 140px);
+  height: calc(100vh - 120px);
+  padding: 20px;
+}
+
+a {
+  color: var(--color-highlight-1);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-highlight-2);
 }

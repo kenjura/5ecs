@@ -1,20 +1,51 @@
-
-nav#nav-main {
-    grid-column: 3;
-    text-align: center;
-    a {
-        color: inherit;
-        display: inline-block;
-        font-size:  150%;
-        padding: 1em 2em;
-        text-decoration: none;
-    }
-    a.active {
-        border-bottom: 2px solid;
-        box-shadow: 0 -2px 0px 0px var(--color-highlight-2) inset
-    }
-    a:hover {
-        border-bottom: 2px solid;
-    }
+nav {
+  text-align: center;
+  a {
+    color: inherit;
+    display: inline-block;
+    font-size: 150%;
+    padding: 1em 2em;
+    text-decoration: none;
   }
-  
+  a.active {
+    border-bottom: 2px solid;
+    box-shadow: 0 -2px 0px 0px var(--color-highlight-2) inset;
+  }
+  a:hover {
+    border-bottom: 2px solid;
+  }
+}
+
+nav[level='2'] {
+  a {
+    display: block;
+    font-size: 100%;
+    width: 100px;
+    text-align: left;
+  }
+  a.active {
+    border-bottom: none;
+    box-shadow: 2px 0 0px 0px white inset;
+  }
+  a:hover {
+    border-bottom: none;
+    box-shadow: 2px 0 0px 0px var(--color-highlight-1) inset;
+  }
+}
+
+nav[level='3'] {
+  a {
+    display: block;
+    font-size: 100%;
+    width: 100px;
+    text-align: left;
+  }
+  a.active {
+    border-bottom: none;
+    box-shadow: 2px 0 0px 0px white inset;
+  }
+  a:hover {
+    border-bottom: none;
+    box-shadow: 2px 0 0px 0px var(--color-highlight-1) inset;
+  }
+}

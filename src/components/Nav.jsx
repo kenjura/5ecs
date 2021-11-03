@@ -1,16 +1,19 @@
 // @flow
 
 import * as React from 'react';
-import { Link, useRoute } from "wouter";
+import { Link, useRouteMatch } from "react-router-dom";
 
 import "./Nav.scss";
 
-export default function Nav():React.MixedElement {
-  const [isCharacters] = useRoute("/characters");
-  const [isSystem] = useRoute("/system");
+type Props = {
+  children?:React.Node,
+  level:string,
+}
 
-    return <nav id="nav-main"> 
-        <Link href="/characters" className={isCharacters ? 'active' :''}>Characters</Link>
-        <Link href="/system" className={isSystem ? 'active' : ''}>System</Link>
+export default function Nav({ children, level }:Props):React.MixedElement {
+    return <nav level={level}>
+    {
+      children
+    }
     </nav>
 }

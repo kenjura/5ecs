@@ -1,19 +1,35 @@
 import logo from './logo.svg';
 import './App.scss';
 import Nav from './components/Nav';
-import { useRoute } from "wouter";
+import SystemPage from './components/pages/SystemPage';
+import {
+  BrowserRouter as Router,
+  NavLink,
+  Route,
+  Switch,
+  useRouteMatch,
+} from 'react-router-dom';
 
 function App() {
-  const [ isCharacters ] = useRoute('/characters');
-  const [ isSystem ] = useRoute('/system');
-
   return (
     <div className="App">
-        
-      <Nav />
+      <Router>
+        <Nav>
+          <NavLink to="/character" activeClassName="active">
+            Characters
+          </NavLink>
+          <NavLink to="/system" activeClassName="active">
+            System
+          </NavLink>
+        </Nav>
 
-      { isCharacters ? 'character page' : '' }
-      { isSystem ? 'system page' : '' }
+        <Switch>
+          <Route path="/character">characters</Route>
+          <Route path="/system">
+            <SystemPage />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

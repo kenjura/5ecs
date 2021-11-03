@@ -1,17 +1,21 @@
 {
   "name": "5ecs",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "eslint": "^7.32.0",
+    "moize": "^6.1.0",
     "node-sass": "^6.0.1",
+    "prettier": "^2.4.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-markdown": "^7.1.0",
+    "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2",
-    "wouter": "^2.8.0-alpha.1"
+    "web-vitals": "^1.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -36,5 +40,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0"
   }
 }
