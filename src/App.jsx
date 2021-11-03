@@ -1,5 +1,6 @@
 import './App.scss';
 import Nav from './components/Nav';
+import CharactersPage from './components/pages/CharactersPage';
 import SystemPage from './components/pages/SystemPage';
 import {
   BrowserRouter as Router,
@@ -23,7 +24,9 @@ function App() {
         </Nav>
 
         <Switch>
-          <Route path="/character">characters</Route>
+          <Route path="/character">
+            <CharactersPage />
+          </Route>
           <Route path="/system">
             <SystemPage />
           </Route>
