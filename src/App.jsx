@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.scss';
 import Nav from './components/Nav';
 import SystemPage from './components/pages/SystemPage';
@@ -7,8 +6,8 @@ import {
   NavLink,
   Route,
   Switch,
-  useRouteMatch,
 } from 'react-router-dom';
+import * as React from 'react';
 
 function App() {
   return (

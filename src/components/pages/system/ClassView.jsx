@@ -7,21 +7,23 @@ import ReactMarkdown from 'react-markdown';
 import { useEffect, useState } from 'react';
 
 type Props = {
-    characterClass: ?CharacterClass,
-}
+  characterClass: ?CharacterClass,
+};
 
-export default function ClassView({ characterClass }:Props) {
-    const [ contents, setContents ] = useState('');
+export default function ClassView({ characterClass }: Props) {
+  const [contents, setContents] = useState('');
 
-    useEffect(async ():Promise<void> => {
-        if (!characterClass) return;
-        const newContents = await characterClass.getContents();
-        setContents(newContents);
-    }, [characterClass?.name])
+  useEffect(async (): Promise<void> => {
+    if (!characterClass) return;
+    const newContents = await characterClass.getContents();
+    setContents(newContents);
+  }, [characterClass?.name]);
 
-    if (!characterClass) return <div>no class</div>;
+  if (!characterClass) return <div>no class</div>;
 
-    return <div>
-        <ReactMarkdown>{contents}</ReactMarkdown>
+  return (
+    <div>
+      <ReactMarkdown>{contents}</ReactMarkdown>
     </div>
+  );
 }

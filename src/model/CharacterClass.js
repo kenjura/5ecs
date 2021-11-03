@@ -1,7 +1,6 @@
 // @flow
 
 import moize from 'moize';
-import { get } from '../helper/fetchHelper';
 
 export interface ICharacterClass {
   name: string;

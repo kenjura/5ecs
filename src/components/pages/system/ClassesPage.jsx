@@ -8,7 +8,7 @@ import { NavLink, useParams, useRouteMatch } from 'react-router-dom';
 
 export default function ClassesPage(): React.MixedElement {
   const { className } = useParams();
-  const { path, url } = useRouteMatch();
+  const { path } = useRouteMatch();
   const classes: Array<CharacterClass> = CharacterClass.findAll();
   const currentClass: ?CharacterClass =
     CharacterClass.findOneByName(className);
@@ -19,7 +19,7 @@ export default function ClassesPage(): React.MixedElement {
         {classes.map((clas) => (
           <NavLink
             key={clas.name}
-            to={`${path.replace(':className?',clas.name)}`}
+            to={`${path.replace(':className?', clas.name)}`}
             activeClassName="active"
           >
             {clas.name}
